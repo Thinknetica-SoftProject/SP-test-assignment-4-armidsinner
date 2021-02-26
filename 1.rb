@@ -16,7 +16,7 @@
 #
 ## Решение:
 
-file = File.new("data/1.txt","r:UTF-8")
+file = File.new("data/1.txt")
 content = file.read
 elements = content.split(//)
 count = 0
