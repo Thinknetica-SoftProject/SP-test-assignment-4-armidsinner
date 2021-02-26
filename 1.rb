@@ -16,6 +16,21 @@
 #
 ## Решение:
 
+def problem1
+  file = File.new("C:/Users/Динара/github/SP-test-assignment-4-armidsinner/data/1.txt","r:UTF-8")
+  content = file.read
+  elements = content.split(//)
+  count = 0
 
+  for item in elements do
+    if item == ")"
+      count += 1
+    end
+    if item == "("
+      count -= 1
+    end
+  end
+  puts(count)
+end
 
-
+problem1
