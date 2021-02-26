@@ -16,16 +16,16 @@
 #
 ## Решение:
 
-file = File.new("data/1.txt")
+file = File.new("data/1.txt","r:UTF-8)
 content = file.read
 elements = content.split(//)
 count = 0
 
 for item in elements do
-  if item == ")"
+  if item == "("
     count += 1
   end
-  if item == "("
+  if item == ")"
     count -= 1
   end
 end
