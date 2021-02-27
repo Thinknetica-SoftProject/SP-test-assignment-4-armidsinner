@@ -29,4 +29,5 @@ for item in elements do
     count -= 1
   end
 end
+file.close
 puts(count)
