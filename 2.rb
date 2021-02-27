@@ -18,25 +18,25 @@
 
 require "digest"
 
-last = gets.chomp
-b = Digest::MD5.hexdigest(last)
-c = 0
-g = 0
+previous = gets.chomp
+hashed = Digest::MD5.hexdigest(previous)
+check = 0
+gain = 0
 checker = 0
-while c != 1
-  g += 1
-  new =last+g.to_s
-  b = Digest::MD5.hexdigest(new)
-  d = b.split(//)
+while check != 1
+  gain += 1
+  new =previous+gain.to_s
+  hashed = Digest::MD5.hexdigest(new)
+  elem = hashed.split(//)
   for i in 0..4
-    if d[i] == '0'
+    if elem[i] == '0'
       checker += 1
     end
   end
   if checker == 5
-    c = 1
+    check = 1
   else
     checker = 0
   end
 end
-puts (g)
+puts (gain)
