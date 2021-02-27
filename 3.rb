@@ -11,3 +11,15 @@
 ## Решение:
 
 
+lines = IO.readlines("data/3.txt")
+result=0
+for i in (0..(lines.length-1))
+  elements = lines[i].split(/\t/).map(&:to_i)
+  max_elem = elements.max
+  min_elem = elements.min
+  result = result + (max_elem-min_elem)
+end
+puts result
+
+
+
